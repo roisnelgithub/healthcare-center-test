@@ -9,6 +9,7 @@ const InfoServices = () => {
     <Stack alignItems={"center"} spacing={6}>
       <Stack direction="row" sx={{ maxWidth: "1000px" }} spacing={4}>
         <Stack sx={{ width: "55%" }}>
+          {/* TODO: Cambiar la imagen */}
           <img src={doctor} className="img-services" />
         </Stack>
 
