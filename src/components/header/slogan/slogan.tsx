@@ -8,7 +8,7 @@ const Slogan = () => {
         <Typography variant="h3" sx={{ color: "white", textAlign: "center" }}>
           Tu bienestar es nuestra prioridad
         </Typography>
-        <CustomButton />
+        <CustomButton text="Contáctanos" />
       </Stack>
     </Box>
   );
