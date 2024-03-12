@@ -2,8 +2,8 @@ import { Box, Stack, Typography } from "@mui/material";
 import { Logo } from "../../logo";
 import { LeftMenu } from "../../left-menu";
 import { CopyRight } from "../copy-right";
-import Language from "../../header/language/language";
 import { colorFooter } from "../../../styles";
+import { Language } from "../../language";
 
 const Footer = () => {
   return (
