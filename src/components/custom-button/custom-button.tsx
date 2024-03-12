@@ -1,4 +1,5 @@
 import { Box, Typography } from "@mui/material";
+import { colorBlueBtn, colorBlueBtnHover } from "../../styles";
 
 interface CustomButtonProps {
   text: string;
@@ -11,12 +12,13 @@ const CustomButton = ({ text }: CustomButtonProps) => {
         justifyContent: "center",
         alignItems: "center",
         height: "40px",
-        bgcolor: "#4287f5",
+        bgcolor: colorBlueBtn,
         px: "32px",
         minWidth: "150px",
         borderRadius: "24px",
+        boxShadow: 6,
         ":hover": {
-          bgcolor: "#3b77d8",
+          bgcolor: colorBlueBtnHover,
           cursor: "pointer",
         },
       }}

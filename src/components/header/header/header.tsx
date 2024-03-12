@@ -16,7 +16,7 @@ const Header = () => {
         alignItems="center"
         sx={{
           position: "absolute",
-          top: "200px",
+          top: "8rem",
           width: "100%",
         }}
       >
