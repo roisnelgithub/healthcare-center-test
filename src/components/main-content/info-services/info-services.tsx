@@ -1,6 +1,7 @@
 import { Stack, Typography } from "@mui/material";
 import { CustomButton } from "../../custom-button";
-import doctor from "../../../assets/doctora2.jpg";
+import { doctors } from "../../../assets/index";
+import { colorText } from "../../../styles";
 
 import "./info-services.css";
 
@@ -9,15 +10,18 @@ const InfoServices = () => {
     <Stack alignItems={"center"} spacing={6}>
       <Stack direction="row" sx={{ maxWidth: "1000px" }} spacing={4}>
         <Stack sx={{ width: "55%" }}>
-          {/* TODO: Cambiar la imagen */}
-          <img src={doctor} className="img-services" />
+          <img src={doctors} />
         </Stack>
 
         <Stack spacing={2}>
-          <Typography variant="h2" fontWeight="bold">
+          <Typography variant="h2" fontWeight="bold" color={colorText}>
             Servicios DOT
           </Typography>
-          <Typography variant="subtitle1" textAlign={"center"}>
+          <Typography
+            variant="subtitle1"
+            textAlign={"center"}
+            color={colorText}
+          >
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam optio
             voluptates consectetur ratione repellat minima. Molestias architecto
             repellendus dolor libero asperiores magnam officia corrupti.
