@@ -9,7 +9,6 @@ const NavBar = () => {
     <Box
       sx={{
         width: "100vw",
-        bgcolor: "rgba(0, 149, 248, 0.2)",
         alignItems: "center",
         zIndex: 10,
       }}
