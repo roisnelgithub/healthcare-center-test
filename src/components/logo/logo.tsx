@@ -1,11 +1,10 @@
-import { Box, Typography } from "@mui/material";
+import { Box } from "@mui/material";
+import logo from "../../assets/moya-medical-logo-1.png";
 
 const Logo = () => {
   return (
     <Box>
-      {/* TODO:Buscar el logo en Figma */}
-      {/* TODO: Verificar el nombre de la empresa. MOYA o MQYA */}
-      <Typography>MOYA MEDICAL</Typography>
+      <img src={logo} alt="Moya Medical Logo" />
     </Box>
   );
 };

@@ -18,7 +18,7 @@ const NavBar = () => {
         direction="row"
         justifyContent="center"
         alignItems="center"
-        sx={{ height: "50px", color: "white" }}
+        sx={{ color: "white", py: "1rem" }}
         spacing={6}
       >
         <Logo />
