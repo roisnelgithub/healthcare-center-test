@@ -7,12 +7,12 @@ import "./app.css";
 
 function App() {
   return (
-    <Stack spacing={8}>
-      <Stack spacing={25}>
-        <Header />
+    <Stack>
+      <Header />
+      <Stack spacing={4}>
         <MainContent />
+        <Footer />
       </Stack>
-      <Footer />
     </Stack>
   );
 }

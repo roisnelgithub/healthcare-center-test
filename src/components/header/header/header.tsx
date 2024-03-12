@@ -1,6 +1,5 @@
 import { Box, Stack } from "@mui/material";
 import { Slogan } from "../slogan";
-import { CardList } from "../../card-list";
 import NavBar from "../nav-bar/nav-bar";
 import doctor from "../../../assets/doctor-1.png";
 
@@ -33,16 +32,6 @@ const Header = () => {
           borderBottomRightRadius: "300px",
         }}
       ></Box>
-      <Stack
-        sx={{
-          position: "absolute",
-          bottom: "-160px",
-          width: "100%",
-          zIndex: 10,
-        }}
-      >
-        <CardList />
-      </Stack>
     </Box>
   );
 };
