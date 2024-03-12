@@ -13,10 +13,12 @@ const Header = () => {
       </Stack>
       <Stack
         alignItems="center"
+        justifyContent={"center"}
         sx={{
           position: "absolute",
-          top: "8rem",
+          top: 0,
           width: "100%",
+          height: "100%",
         }}
       >
         <Slogan />
