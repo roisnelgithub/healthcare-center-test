@@ -1,35 +1,42 @@
 import { Box, Stack, Typography } from "@mui/material";
 import { Logo } from "../../logo";
 import { LeftMenu } from "../../left-menu";
-import Language from "../../header/language/language";
 import { CopyRight } from "../copy-right";
+import Language from "../../header/language/language";
+import { colorFooter } from "../../../styles";
 
 const Footer = () => {
   return (
-    <Box
-      sx={{
-        display: "flex",
-        justifyContent: "center",
-        flexDirection: "column",
-        gap: 2,
-        alignItems: "center",
-        height: "200px",
-        bgcolor: "#101949",
-        borderTopRightRadius: "60%",
-        borderTopLeftRadius: "60%",
-        color: "white",
-      }}
-    >
-      <Stack alignItems={"center"} sx={{}}>
-        <Stack direction="row" spacing={4}>
-          <Logo />
-          <LeftMenu />
-          <Language />
-          <Typography>Contáctanos</Typography>
+    <Box sx={{ width: "100%", display: "flex", justifyContent: "center" }}>
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          flexDirection: "column",
+          gap: 2,
+          alignItems: "center",
+          height: "200px",
+          bgcolor: colorFooter,
+          borderTopRightRadius: "60%",
+          borderTopLeftRadius: "60%",
+          color: "white",
+          width: "100%",
+          maxWidth: "1920px",
+        }}
+      >
+        <Stack alignItems={"center"} sx={{}}>
+          <Stack direction="row" spacing={4}>
+            <Logo />
+            <LeftMenu />
+            <Language />
+            <Box sx={{ display: "flex", alignItems: "center" }}>
+              <Typography>Contáctenos</Typography>
+            </Box>
+          </Stack>
         </Stack>
-      </Stack>
 
-      <CopyRight />
+        <CopyRight />
+      </Box>
     </Box>
   );
 };
