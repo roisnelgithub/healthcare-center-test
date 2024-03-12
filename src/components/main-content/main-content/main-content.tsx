@@ -19,7 +19,7 @@ const MainContent = () => {
           <CardList />
         </Box>
       </Box>
-      <Box sx={{ marginTop: "17rem" }}>
+      <Box sx={{ marginTop: "18rem" }}>
         <Stack spacing={10}>
           <HeaderServices />
           <InfoServices />
