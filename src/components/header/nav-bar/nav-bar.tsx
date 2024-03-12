@@ -2,7 +2,7 @@ import { Box, Stack } from "@mui/material";
 import { Logo } from "../../logo";
 import { LeftMenu } from "../../left-menu";
 import { RightMenu } from "../../right-menu";
-import Language from "../lenguaje/languaje";
+import Language from "../language/language";
 
 const NavBar = () => {
   return (

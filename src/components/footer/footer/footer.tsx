@@ -1,7 +1,7 @@
 import { Box, Stack, Typography } from "@mui/material";
 import { Logo } from "../../logo";
 import { LeftMenu } from "../../left-menu";
-import Language from "../../header/lenguaje/languaje";
+import Language from "../../header/language/language";
 import { CopyRight } from "../copy-right";
 
 const Footer = () => {
