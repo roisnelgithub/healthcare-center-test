@@ -1,12 +1,14 @@
 import { Box, Stack } from "@mui/material";
-import doctor from "../../../assets/doctor.jpg";
-import NavBar from "../nav-bar/nav-bar";
 import { Slogan } from "../slogan";
 import { CardList } from "../../card-list";
+import NavBar from "../nav-bar/nav-bar";
+import doctor from "../../../assets/doctor-1.png";
 
 const Header = () => {
   return (
-    <Box sx={{ position: "relative" }}>
+    <Box
+      sx={{ position: "relative", display: "flex", justifyContent: "center" }}
+    >
       <Stack sx={{ position: "absolute", top: 0, left: 0 }}>
         <NavBar />
       </Stack>
@@ -22,12 +24,11 @@ const Header = () => {
       </Stack>
       <Box
         sx={{
-          background: `url(${doctor})`,
-          backgroundRepeat: "no-repeat",
+          background: `linear-gradient( rgb(0, 22, 57,0.8) , transparent), url(${doctor}) center no-repeat`,
           width: "100%",
-          backgroundSize: "100%",
-          opacity: 0.8,
-          height: "calc(100vh - 20px)",
+          maxWidth: "1920px",
+          height: "100vh",
+          maxHeight: "1000px",
           borderBottomLeftRadius: "300px",
           borderBottomRightRadius: "300px",
         }}
