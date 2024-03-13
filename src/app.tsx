@@ -1,21 +1,14 @@
-import { Stack } from "@mui/material";
-import { Header } from "./components/header";
-import { MainContent } from "./components/main-content";
-import { Footer } from "./components/footer";
-import { MQContextProvider } from "./components/context";
-
 import "./app.css";
+import { MQContextProvider, MenuContextProvider } from "./components";
+
+import Temporal from "./temporal";
 
 function App() {
   return (
     <MQContextProvider>
-      <Stack>
-        <Header />
-        <Stack spacing={4}>
-          <MainContent />
-          <Footer />
-        </Stack>
-      </Stack>
+      <MenuContextProvider>
+        <Temporal />
+      </MenuContextProvider>
     </MQContextProvider>
   );
 }
