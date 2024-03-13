@@ -1,8 +1,15 @@
 import { Stack, Typography } from "@mui/material";
 
-const LeftMenu = () => {
+interface LeftMenuProps {
+  directionColum: boolean;
+}
+const LeftMenu = ({ directionColum }: LeftMenuProps) => {
   return (
-    <Stack direction="row" spacing={4} alignItems={"center"}>
+    <Stack
+      direction={directionColum ? "column" : "row"}
+      spacing={4}
+      alignItems={"center"}
+    >
       <Typography>Nuestra Compañía</Typography>
       <Typography>Nuestros Servicios</Typography>
     </Stack>
