@@ -4,17 +4,35 @@ import { doctors } from "../../../assets/index";
 import { colorText } from "../../../styles";
 
 import "./info-services.css";
+import { useContext } from "react";
+import { MQContext } from "../../context";
 
 const InfoServices = () => {
+  const { xs, sm, md } = useContext(MQContext);
+
   return (
     <Stack alignItems={"center"} spacing={6}>
-      <Stack direction="row" sx={{ maxWidth: "1000px" }} spacing={4}>
-        <Stack sx={{ width: "55%" }}>
+      <Stack
+        direction={sm ? "column" : "row"}
+        sx={{ maxWidth: "80%" }}
+        spacing={4}
+        justifyContent={"center"}
+        alignItems={"center"}
+      >
+        <Stack
+          sx={{ width: sm ? "100%" : "55%", maxWidth: "500px" }}
+          justifyContent={md ? "center" : ""}
+        >
           <img src={doctors} />
         </Stack>
 
         <Stack spacing={2}>
-          <Typography variant="h2" fontWeight="bold" color={colorText}>
+          <Typography
+            variant={xs ? "h4" : sm ? "h3" : "h2"}
+            fontWeight="bold"
+            color={colorText}
+            textAlign={"center"}
+          >
             Servicios DOT
           </Typography>
           <Typography
