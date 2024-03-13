@@ -1,36 +1,36 @@
 import { Paper, Stack, Typography } from "@mui/material";
 import { CustomIcon } from "../../custom-icon";
 import { colorText } from "../../../styles";
+import { useContext } from "react";
+import { MQContext } from "../../context";
 
 interface CardMenuProps {
   id: number;
   title: string;
   desc: string;
   icon: string;
-  iconSize?: number;
 }
-const CardMenu = ({ title, desc, icon, iconSize }: CardMenuProps) => {
+const CardMenu = ({ title, desc, icon }: CardMenuProps) => {
+  const { xs, md } = useContext(MQContext);
   return (
     <Paper
       sx={{
-        width: "100%",
         bgcolor: "white",
         borderRadius: 0,
+        minWidth: "120px",
+        maxWidth: "296px",
+        maxHeight: "397px",
         borderBottomRightRadius: "2rem",
         textOverflow: "ellipsis",
         overflow: "hidden",
-        padding: "1rem 1rem",
+        padding: xs ? "0.5rem" : "1rem",
       }}
     >
-      <Stack
-        alignItems="center"
-        spacing={2}
-        sx={{ maxWidth: "16rem", maxHeight: "18rem" }}
-      >
-        <CustomIcon size={55} icon={icon} iconSize={iconSize} />
+      <Stack alignItems="center" spacing={xs ? 1 : md ? 2 : 3}>
+        <CustomIcon size={xs ? 24 : md ? 48 : 55} icon={icon} />
 
         <Typography
-          variant="h5"
+          variant={xs ? "subtitle1" : "h5"}
           textAlign={"center"}
           fontWeight={"bold"}
           color={colorText}
@@ -38,17 +38,7 @@ const CardMenu = ({ title, desc, icon, iconSize }: CardMenuProps) => {
         >
           {title}
         </Typography>
-
-        <Typography
-          variant="subtitle1"
-          textAlign={"center"}
-          color={colorText}
-          // sx={{
-          //   textOverflow: "hidden",
-          //   whiteSpace: "break-spaces",
-          //   margin: "auto",
-          // }}
-        >
+        <Typography variant="caption" textAlign={"center"} color={colorText}>
           {desc}
         </Typography>
       </Stack>

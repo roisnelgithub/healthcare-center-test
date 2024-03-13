@@ -6,7 +6,7 @@ interface CustomIconProps {
   icon: string;
   iconSize?: number;
 }
-const CustomIcon = ({ size, icon, iconSize }: CustomIconProps) => {
+const CustomIcon = ({ size, icon }: CustomIconProps) => {
   return (
     <Box
       sx={{
@@ -23,7 +23,7 @@ const CustomIcon = ({ size, icon, iconSize }: CustomIconProps) => {
         src={icon}
         alt="Icon"
         style={{
-          width: iconSize ? `${iconSize}px` : "100%",
+          width: "100%",
           objectFit: "cover",
         }}
       />
