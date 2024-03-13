@@ -4,7 +4,7 @@ import { LeftMenu } from "../../left-menu";
 import { RightMenu } from "../../right-menu";
 import { Language } from "../../language";
 import { useContext } from "react";
-import { MQContext } from "../../context";
+import { MQContext } from "../../../context";
 import { Menu } from "@mui/icons-material";
 
 const NavBar = () => {

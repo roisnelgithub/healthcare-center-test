@@ -5,7 +5,7 @@ import { CopyRight } from "../copy-right";
 import { colorFooter } from "../../../styles";
 import { Language } from "../../language";
 import { useContext } from "react";
-import { MQContext } from "../../context";
+import { MQContext } from "../../../context";
 
 const Footer = () => {
   const { xs, sm } = useContext(MQContext);

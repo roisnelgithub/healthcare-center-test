@@ -5,7 +5,7 @@ import { colorText } from "../../../styles";
 
 import "./info-services.css";
 import { useContext } from "react";
-import { MQContext } from "../../context";
+import { MQContext } from "../../../context";
 
 const InfoServices = () => {
   const { xs, sm, md } = useContext(MQContext);

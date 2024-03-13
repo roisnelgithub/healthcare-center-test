@@ -1,7 +1,7 @@
 import { Box } from "@mui/material";
 import logo from "../../assets/moya-medical-logo-1.png";
 import { useContext } from "react";
-import { MQContext } from "../context";
+import { MQContext } from "../../context";
 
 const Logo = () => {
   const { sm } = useContext(MQContext);

@@ -3,7 +3,7 @@ import { Slogan } from "../slogan";
 import NavBar from "../nav-bar/nav-bar";
 import doctor from "../../../assets/doctor-1.png";
 import { useContext } from "react";
-import { MQContext } from "../../context";
+import { MQContext } from "../../../context";
 
 const Header = () => {
   const { xs, sm, md } = useContext(MQContext);

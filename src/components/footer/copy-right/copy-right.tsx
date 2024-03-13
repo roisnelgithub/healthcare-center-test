@@ -1,6 +1,6 @@
 import { Typography } from "@mui/material";
 import { useContext } from "react";
-import { MQContext } from "../../context";
+import { MQContext } from "../../../context";
 
 const CopyRight = () => {
   const { xs } = useContext(MQContext);

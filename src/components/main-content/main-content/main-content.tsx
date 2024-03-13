@@ -3,7 +3,7 @@ import { HeaderServices } from "../header-services";
 import { InfoServices } from "../info-services";
 import CardGrid from "../card-grid/card-grid";
 import { useContext } from "react";
-import { MQContext } from "../../context";
+import { MQContext } from "../../../context";
 
 const MainContent = () => {
   const { xs, sm, md } = useContext(MQContext);
