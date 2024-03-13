@@ -2,8 +2,12 @@ import { Box, Stack } from "@mui/material";
 import { Slogan } from "../slogan";
 import NavBar from "../nav-bar/nav-bar";
 import doctor from "../../../assets/doctor-1.png";
+import { useContext } from "react";
+import { MQContext } from "../../context";
 
 const Header = () => {
+  const { xs, sm, md } = useContext(MQContext);
+
   return (
     <Box
       sx={{ position: "relative", display: "flex", justifyContent: "center" }}
@@ -30,8 +34,20 @@ const Header = () => {
           maxWidth: "1920px",
           height: "100vh",
           maxHeight: "1000px",
-          borderBottomLeftRadius: "300px",
-          borderBottomRightRadius: "300px",
+          borderBottomLeftRadius: xs
+            ? "3rem"
+            : sm
+            ? "6rem"
+            : md
+            ? "12rem"
+            : "18rem",
+          borderBottomRightRadius: xs
+            ? "3rem"
+            : sm
+            ? "6rem"
+            : md
+            ? "12rem"
+            : "18rem",
         }}
       ></Box>
     </Box>
