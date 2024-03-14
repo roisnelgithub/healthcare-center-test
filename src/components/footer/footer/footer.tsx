@@ -35,7 +35,7 @@ const Footer = () => {
           >
             <Logo />
             <LeftMenu directionColum={xs} />
-            <Language />
+            <Language arrowColor="white" />
             <Box sx={{ display: "flex", alignItems: "center" }}>
               <Typography>Contáctenos</Typography>
             </Box>
