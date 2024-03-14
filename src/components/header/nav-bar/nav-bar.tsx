@@ -4,11 +4,12 @@ import { LeftMenu } from "../../left-menu";
 import { RightMenu } from "../../right-menu";
 import { Language } from "../../language";
 import { useContext } from "react";
-import { MQContext } from "../../../context";
+import { MQContext, MenuContext } from "../../../context";
 import { Menu } from "@mui/icons-material";
 
 const NavBar = () => {
   const { lg } = useContext(MQContext);
+  const { openMenu } = useContext(MenuContext);
 
   return (
     <Box
@@ -28,12 +29,12 @@ const NavBar = () => {
         <Logo />
         {!lg ? (
           <Box sx={{ pr: "0.5rem" }}>
-            <Menu />
+            <Menu onClick={openMenu} />
           </Box>
         ) : (
           <>
             <LeftMenu directionColum={false} />
-            <Language />
+            <Language arrowColor="white" />
             <RightMenu />
           </>
         )}
