@@ -1,7 +1,6 @@
 import { Box, Stack } from "@mui/material";
 import { HeaderServices } from "../header-services";
 import { InfoServices } from "../info-services";
-import CardGrid from "../../../../components/card-grid/card-grid";
 import { useContext } from "react";
 import { MQContext } from "../../../../context";
 import {
@@ -10,6 +9,7 @@ import {
   physicalExam,
   testTube,
 } from "../../../../assets";
+import { CardGrid } from "../../../../components";
 
 const MainContent = () => {
   const { xs, sm, md } = useContext(MQContext);
