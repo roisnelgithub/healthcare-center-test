@@ -77,7 +77,7 @@ const cards = [
   {
     id: 10,
     title: "Recolección de muestras 24h",
-    desc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed diam",
+    desc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed diam,Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed diam",
     icon: medicalTest,
   },
   {
@@ -116,10 +116,16 @@ const ServicesPage = () => {
           width: "100%",
           display: "flex",
           justifyContent: "center",
-          my: "3rem",
+          m: "3rem auto",
         }}
       >
-        <Stack sx={{ maxWidth: "80%" }} alignItems={"center"} spacing={6}>
+        <Stack
+          sx={{
+            width: xs ? "95%" : sm ? "90%" : md ? "85%" : "80%",
+          }}
+          alignItems={"center"}
+          spacing={6}
+        >
           <CardGrid cards={cards} />
         </Stack>
       </Box>

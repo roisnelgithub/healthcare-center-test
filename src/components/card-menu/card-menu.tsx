@@ -24,7 +24,6 @@ const CardMenu = ({ card }: CardMenuProps) => {
         borderRadius: 0,
         minWidth: "120px",
         maxWidth: "296px",
-        maxHeight: "397px",
         borderBottomRightRadius: "2rem",
         textOverflow: "ellipsis",
         overflow: "hidden",
@@ -33,19 +32,22 @@ const CardMenu = ({ card }: CardMenuProps) => {
     >
       <Stack alignItems="center" spacing={xs ? 1 : md ? 2 : 3}>
         <CustomIcon size={xs ? 24 : md ? 48 : 55} icon={icon} />
+        <Stack sx={{ height: "64px" }} justifyContent={"center"}>
+          <Typography
+            variant={xs ? "subtitle1" : "h6"}
+            textAlign={"center"}
+            fontWeight={"bold"}
+            color={colorText}
+          >
+            {title}
+          </Typography>
+        </Stack>
 
-        <Typography
-          variant={xs ? "subtitle1" : "h5"}
-          textAlign={"center"}
-          fontWeight={"bold"}
-          color={colorText}
-          sx={{ maxWidth: "11rem" }}
-        >
-          {title}
-        </Typography>
-        <Typography variant="caption" textAlign={"center"} color={colorText}>
-          {desc}
-        </Typography>
+        <Stack sx={{ height: "80px" }}>
+          <Typography variant="caption" textAlign={"center"} color={colorText}>
+            {desc}
+          </Typography>
+        </Stack>
       </Stack>
     </Paper>
   );
