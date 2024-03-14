@@ -1,10 +1,10 @@
 import { Box, Stack } from "@mui/material";
-import { Logo } from "../../logo";
-import { LeftMenu } from "../../left-menu";
-import { RightMenu } from "../../right-menu";
-import { Language } from "../../language";
+import { Logo } from "../logo";
+import { LeftMenu } from "../left-menu";
+import { RightMenu } from "../right-menu";
+import { Language } from "../language";
 import { useContext } from "react";
-import { MQContext, MenuContext } from "../../../context";
+import { MQContext, MenuContext } from "../../context";
 import { Menu } from "@mui/icons-material";
 
 const NavBar = () => {

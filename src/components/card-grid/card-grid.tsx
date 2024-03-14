@@ -1,11 +1,12 @@
-import { Stack } from "@mui/material";
-import { CardMenu } from "../card-menu";
+import { Grid } from "@mui/material";
 import {
-  medicalPlaster,
   medicalBag,
+  medicalPlaster,
   physicalExam,
   testTube,
-} from "../../../assets/index";
+} from "../../assets";
+import { CardMenu } from "../card-menu";
+
 const cards = [
   {
     id: 1,
@@ -24,7 +25,6 @@ const cards = [
     title: "Exámenes físicos",
     desc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed diam",
     icon: physicalExam,
-    iconSize: 50,
   },
   {
     id: 4,
@@ -34,19 +34,22 @@ const cards = [
   },
 ];
 
-const CardList = () => {
+const CardGrid = () => {
   return (
-    <Stack
-      direction="row"
+    <Grid
+      container
+      spacing={{ xs: 2, sm: 2, md: 3 }}
       justifyContent={"center"}
-      spacing={3}
-      sx={{ width: "80%", margin: "0 auto" }}
+      columns={{ xs: 4, sm: 12, md: 12 }}
+      sx={{ ml: "-8px" }}
     >
       {cards.map((card) => (
-        <CardMenu key={card.id} {...card} />
+        <Grid key={card.id} item xs={2} sm={6} md={3}>
+          <CardMenu key={card.id} {...card} />
+        </Grid>
       ))}
-    </Stack>
+    </Grid>
   );
 };
 
-export default CardList;
+export default CardGrid;

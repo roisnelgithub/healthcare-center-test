@@ -2,6 +2,7 @@ import { Box } from "@mui/material";
 import logo from "../../assets/moya-medical-logo-1.png";
 import { useContext } from "react";
 import { MQContext } from "../../context";
+import { Link } from "react-router-dom";
 
 const Logo = () => {
   const { sm } = useContext(MQContext);
@@ -13,7 +14,9 @@ const Logo = () => {
         alignItems: "center",
       }}
     >
-      <img src={logo} alt="Moya Medical Logo" style={{ width: "100%" }} />
+      <Link to={"/"}>
+        <img src={logo} alt="Moya Medical Logo" style={{ width: "100%" }} />
+      </Link>
     </Box>
   );
 };

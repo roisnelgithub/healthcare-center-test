@@ -1,7 +1,7 @@
 import { Box, Stack, Typography } from "@mui/material";
-import { CustomButton } from "../../custom-button";
+import { CustomButton } from "../../../../components/custom-button";
 import { useContext } from "react";
-import { MQContext } from "../../../context";
+import { MQContext } from "../../../../context";
 
 const Slogan = () => {
   const { xs, sm, md, lg } = useContext(MQContext);

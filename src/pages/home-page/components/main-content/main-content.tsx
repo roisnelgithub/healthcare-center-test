@@ -1,30 +1,15 @@
 import { Box, Stack } from "@mui/material";
 import { HeaderServices } from "../header-services";
 import { InfoServices } from "../info-services";
-import CardGrid from "../card-grid/card-grid";
+import CardGrid from "../../../../components/card-grid/card-grid";
 import { useContext } from "react";
-import { MQContext, MenuContext } from "../../../context";
+import { MQContext } from "../../../../context";
 
 const MainContent = () => {
   const { xs, sm, md } = useContext(MQContext);
-  const { isOpen, closeMenu } = useContext(MenuContext);
+
   return (
     <>
-      {isOpen && (
-        <Box
-          onClick={closeMenu}
-          sx={{
-            width: "100vw",
-            height: "100vh",
-            bgcolor: "grey",
-            position: "fixed",
-            top: 0,
-            left: 0,
-            zIndex: 15,
-            opacity: 0.7,
-          }}
-        ></Box>
-      )}
       <Box
         sx={{
           display: "flex",

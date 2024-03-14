@@ -1,13 +1,25 @@
-import "./app.css";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { MQContextProvider, MenuContextProvider } from "./components";
 
-import Temporal from "./temporal";
+import { AboutPage, ContactPage, HomePage, ServicesPage } from "./pages";
+import { ShareLayout } from "./layout";
+
+import "./app.css";
 
 function App() {
   return (
     <MQContextProvider>
       <MenuContextProvider>
-        <Temporal />
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<ShareLayout />}>
+              <Route index element={<HomePage />} />
+              <Route path="/about" element={<AboutPage />} />
+              <Route path="/services" element={<ServicesPage />} />
+              <Route path="/contact" element={<ContactPage />} />
+            </Route>
+          </Routes>
+        </BrowserRouter>
       </MenuContextProvider>
     </MQContextProvider>
   );

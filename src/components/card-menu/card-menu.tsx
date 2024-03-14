@@ -1,8 +1,8 @@
 import { Paper, Stack, Typography } from "@mui/material";
-import { CustomIcon } from "../../custom-icon";
-import { colorText } from "../../../styles";
+import { CustomIcon } from "../custom-icon";
+import { colorText } from "../../styles";
 import { useContext } from "react";
-import { MQContext } from "../../../context";
+import { MQContext } from "../../context";
 
 interface CardMenuProps {
   id: number;

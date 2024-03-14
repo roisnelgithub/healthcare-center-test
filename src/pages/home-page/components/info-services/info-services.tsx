@@ -1,11 +1,10 @@
 import { Stack, Typography } from "@mui/material";
-import { CustomButton } from "../../custom-button";
-import { doctors } from "../../../assets/index";
-import { colorText } from "../../../styles";
+import { CustomButton } from "../../../../components/custom-button";
+import { doctors } from "../../../../assets/index";
+import { colorText } from "../../../../styles";
 
-import "./info-services.css";
 import { useContext } from "react";
-import { MQContext } from "../../../context";
+import { MQContext } from "../../../../context";
 
 const InfoServices = () => {
   const { xs, sm, md } = useContext(MQContext);

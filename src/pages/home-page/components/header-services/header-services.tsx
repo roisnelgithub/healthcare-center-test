@@ -1,6 +1,6 @@
 import { Box, Stack, Typography } from "@mui/material";
-import { CustomButton } from "../../custom-button";
-import { colorText } from "../../../styles";
+import { CustomButton } from "../../../../components/custom-button";
+import { colorText } from "../../../../styles";
 
 const HeaderService = () => {
   return (

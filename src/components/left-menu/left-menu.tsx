@@ -1,4 +1,5 @@
 import { Stack, Typography } from "@mui/material";
+import { NavLink } from "react-router-dom";
 
 interface LeftMenuProps {
   directionColum: boolean;
@@ -10,8 +11,18 @@ const LeftMenu = ({ directionColum }: LeftMenuProps) => {
       spacing={4}
       alignItems={"center"}
     >
-      <Typography>Nuestra Compañía</Typography>
-      <Typography>Nuestros Servicios</Typography>
+      <NavLink
+        to={"/about"}
+        className={({ isActive }) => (isActive ? "active" : "normal")}
+      >
+        <Typography>Nuestra Compañía</Typography>
+      </NavLink>
+      <NavLink
+        to={"/services"}
+        className={({ isActive }) => (isActive ? "active" : "normal")}
+      >
+        <Typography>Nuestros Servicios</Typography>
+      </NavLink>
     </Stack>
   );
 };
