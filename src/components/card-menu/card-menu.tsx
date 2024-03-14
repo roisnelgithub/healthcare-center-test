@@ -4,13 +4,18 @@ import { colorText } from "../../styles";
 import { useContext } from "react";
 import { MQContext } from "../../context";
 
-interface CardMenuProps {
+export interface CardMenu {
   id: number;
   title: string;
   desc: string;
   icon: string;
 }
-const CardMenu = ({ title, desc, icon }: CardMenuProps) => {
+
+interface CardMenuProps {
+  card: CardMenu;
+}
+const CardMenu = ({ card }: CardMenuProps) => {
+  const { title, desc, icon } = card;
   const { xs, md } = useContext(MQContext);
   return (
     <Paper

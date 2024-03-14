@@ -4,9 +4,41 @@ import { InfoServices } from "../info-services";
 import CardGrid from "../../../../components/card-grid/card-grid";
 import { useContext } from "react";
 import { MQContext } from "../../../../context";
+import {
+  medicalBag,
+  medicalPlaster,
+  physicalExam,
+  testTube,
+} from "../../../../assets";
 
 const MainContent = () => {
   const { xs, sm, md } = useContext(MQContext);
+  const cards = [
+    {
+      id: 1,
+      title: "Atención de lesiones",
+      desc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed diam",
+      icon: medicalPlaster,
+    },
+    {
+      id: 2,
+      title: "Pruebas de droga y alcohol",
+      desc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed diam",
+      icon: testTube,
+    },
+    {
+      id: 3,
+      title: "Exámenes físicos",
+      desc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed diam",
+      icon: physicalExam,
+    },
+    {
+      id: 4,
+      title: "Medicina preventiva",
+      desc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed diam",
+      icon: medicalBag,
+    },
+  ];
 
   return (
     <>
@@ -24,7 +56,7 @@ const MainContent = () => {
             width: xs ? "95%" : sm ? "90%" : md ? "85%" : "80%",
           }}
         >
-          <CardGrid />
+          <CardGrid cards={cards} />
         </Box>
       </Box>
       <Stack spacing={10} sx={{ transform: "translateY(-6rem)" }}>
