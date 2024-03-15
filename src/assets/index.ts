@@ -14,6 +14,10 @@ import law from "./law.png";
 import medicalTest from "./medical-test.png";
 import recollection from "./recollection.png";
 import trunk from "./trunk.png";
+import whyUs from "./why-us.png";
+import rate1 from "./rate1.png";
+import rate2 from "./rate2.png";
+import rate3 from "./rate3.png";
 
 export {
   medicalBag,
@@ -32,4 +36,8 @@ export {
   medicalTest,
   recollection,
   trunk,
+  whyUs,
+  rate1,
+  rate2,
+  rate3,
 };

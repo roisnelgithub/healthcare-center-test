@@ -4,3 +4,4 @@ export * from "./side-menu";
 export * from "./nav-bar";
 export * from "./card-description";
 export * from "./card-grid";
+export * from "./testimony";

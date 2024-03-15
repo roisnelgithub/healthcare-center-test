@@ -1,13 +1,19 @@
 import { Box, Stack, Typography } from "@mui/material";
 import { colorBlue } from "../../styles";
+import { Link } from "react-router-dom";
 
 interface CardDescriptionProps {
   title: string;
   description: string;
+  link?: string;
 }
-const CardDescription = ({ title, description }: CardDescriptionProps) => {
+const CardDescription = ({
+  title,
+  description,
+  link,
+}: CardDescriptionProps) => {
   return (
-    <Box sx={{ width: "100%" }}>
+    <Box>
       <Stack spacing={2}>
         <Typography
           variant="h4"
@@ -15,8 +21,9 @@ const CardDescription = ({ title, description }: CardDescriptionProps) => {
           color={colorBlue}
           textAlign={"center"}
         >
-          {title}
+          {link ? <Link to={link}>{title}</Link> : title}
         </Typography>
+
         <Typography
           textAlign={"center"}
           sx={{

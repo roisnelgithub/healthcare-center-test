@@ -1,6 +1,12 @@
 :root {
   --clr-primary-blue: hsl(205, 94%, 50%);
 }
+a {
+  text-decoration: none;
+}
+a:visited {
+  color: inherit;
+}
 .normal {
   color: white;
   text-decoration: none;
