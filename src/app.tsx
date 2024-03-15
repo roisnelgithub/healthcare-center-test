@@ -5,6 +5,7 @@ import {
   AboutPage,
   ContactPage,
   HomePage,
+  LaPage,
   ServicesPage,
   WhyUsPage,
 } from "./pages";
@@ -23,6 +24,7 @@ function App() {
               <Route path="/about" element={<AboutPage />}></Route>
               <Route path="/about/why-us" element={<WhyUsPage />} />
               <Route path="/services" element={<ServicesPage />} />
+              <Route path="/services/la" element={<LaPage />} />
               <Route path="/contact" element={<ContactPage />} />
             </Route>
           </Routes>

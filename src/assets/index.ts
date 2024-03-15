@@ -20,6 +20,7 @@ import rate2 from "./rate2.png";
 import rate3 from "./rate3.png";
 import map from "./map.png";
 import location from "./location.png";
+import la from "./la.png";
 
 export {
   medicalBag,
@@ -44,4 +45,5 @@ export {
   rate3,
   map,
   location,
+  la,
 };

@@ -25,6 +25,7 @@ const cards = [
     title: "Atención de lesiones",
     desc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed diam",
     icon: medicalPlaster,
+    link: "/services/la",
   },
   {
     id: 2,
