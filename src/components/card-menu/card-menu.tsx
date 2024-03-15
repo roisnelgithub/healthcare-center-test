@@ -30,7 +30,7 @@ const CardMenu = ({ card }: CardMenuProps) => {
         padding: xs ? "0.5rem" : "1rem",
       }}
     >
-      <Stack alignItems="center" spacing={xs ? 1 : md ? 2 : 3}>
+      <Stack alignItems="center" spacing={xs ? 1 : 2}>
         <CustomIcon size={xs ? 24 : md ? 48 : 55} icon={icon} />
         <Stack sx={{ height: "64px" }} justifyContent={"center"}>
           <Typography
@@ -43,7 +43,7 @@ const CardMenu = ({ card }: CardMenuProps) => {
           </Typography>
         </Stack>
 
-        <Stack sx={{ height: "80px" }}>
+        <Stack sx={{ height: "80px", overflow: "hidden" }}>
           <Typography variant="caption" textAlign={"center"} color={colorText}>
             {desc}
           </Typography>
