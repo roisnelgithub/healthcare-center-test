@@ -1,14 +1,14 @@
-import { Box, Stack } from "@mui/material";
+import { Box, Stack, Typography } from "@mui/material";
 import { Logo } from "../logo";
-import { LeftMenu } from "../left-menu";
-import { RightMenu } from "../right-menu";
 import { Language } from "../language";
 import { useContext } from "react";
 import { MQContext, MenuContext } from "../../context";
 import { Menu } from "@mui/icons-material";
+import { NavBarMenu } from "../nav-bar-menu";
+import { navBarLeft, navBarRight } from "../../const";
 
 const NavBar = () => {
-  const { lg } = useContext(MQContext);
+  const { xs, sm, md, lg } = useContext(MQContext);
   const { openMenu } = useContext(MenuContext);
 
   return (
@@ -21,21 +21,22 @@ const NavBar = () => {
     >
       <Stack
         direction="row"
-        justifyContent={lg ? "center" : "space-between"}
+        justifyContent={!xs ? "center" : "space-between"}
         alignItems="center"
         sx={{ color: "white", p: "1.5rem 0.5rem" }}
-        spacing={6}
+        spacing={xs ? 1 : sm ? 3 : md ? 4 : 6}
       >
         <Logo />
-        {!lg ? (
+        {xs ? (
           <Box sx={{ pr: "0.5rem" }}>
             <Menu onClick={openMenu} />
           </Box>
         ) : (
           <>
-            <LeftMenu directionColum={false} />
+            <NavBarMenu links={navBarLeft} directionColumn={false} />
             <Language arrowColor="white" />
-            <RightMenu />
+            <NavBarMenu links={navBarRight} directionColumn={false} />
+            {lg && <Typography>Portal de usuarios</Typography>}
           </>
         )}
       </Stack>

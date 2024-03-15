@@ -1,14 +1,15 @@
-import { Box, Stack, Typography } from "@mui/material";
+import { Box, Stack } from "@mui/material";
 import { Logo } from "../../logo";
-import { LeftMenu } from "../../left-menu";
 import { CopyRight } from "../copy-right";
 import { colorFooter } from "../../../styles";
 import { Language } from "../../language";
 import { useContext } from "react";
 import { MQContext } from "../../../context";
+import { NavBarMenu } from "../../nav-bar-menu";
+import { navBarLeft, navBarRight } from "../../../const";
 
 const Footer = () => {
-  const { xs, sm } = useContext(MQContext);
+  const { xs, sm, md } = useContext(MQContext);
   return (
     <Box sx={{ width: "100%", display: "flex", justifyContent: "center" }}>
       <Box
@@ -16,7 +17,6 @@ const Footer = () => {
           display: "flex",
           justifyContent: "center",
           flexDirection: "column",
-          gap: 2,
           alignItems: "center",
           bgcolor: colorFooter,
           borderTopRightRadius: xs ? "7rem" : "60%",
@@ -29,16 +29,14 @@ const Footer = () => {
       >
         <Stack alignItems={"center"}>
           <Stack
-            direction={xs || sm ? "column" : "row"}
-            spacing={4}
+            direction={xs ? "column" : "row"}
             alignItems={"center"}
+            spacing={xs || sm ? 1 : md ? 2 : 4}
           >
             <Logo />
-            <LeftMenu directionColum={xs} />
+            <NavBarMenu links={navBarLeft} directionColumn={xs} />
             <Language arrowColor="white" />
-            <Box sx={{ display: "flex", alignItems: "center" }}>
-              <Typography>Contáctenos</Typography>
-            </Box>
+            <NavBarMenu links={navBarRight} directionColumn={xs} />
           </Stack>
         </Stack>
 
