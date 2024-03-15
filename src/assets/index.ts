@@ -18,6 +18,8 @@ import whyUs from "./why-us.png";
 import rate1 from "./rate1.png";
 import rate2 from "./rate2.png";
 import rate3 from "./rate3.png";
+import map from "./map.png";
+import location from "./location.png";
 
 export {
   medicalBag,
@@ -40,4 +42,6 @@ export {
   rate1,
   rate2,
   rate3,
+  map,
+  location,
 };
