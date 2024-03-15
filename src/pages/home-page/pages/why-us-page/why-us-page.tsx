@@ -1,10 +1,10 @@
 import { Box, Stack, Typography } from "@mui/material";
-import { HeaderPageLayout } from "../../layout";
+import { HeaderPageLayout } from "../../../../layout";
 import { useContext } from "react";
-import { MQContext } from "../../context";
-import { rate1, rate2, rate3, whyUs } from "../../assets";
-import { CardDescription, Testimony } from "../../components";
-import { colorBlue } from "../../styles";
+import { MQContext } from "../../../../context";
+import { rate1, rate2, rate3, whyUs } from "../../../../assets";
+import { CardDescription, Testimony } from "../../../../components";
+import { colorBlue } from "../../../../styles";
 
 const testimonials = [
   {
