@@ -4,6 +4,7 @@ import { MQContextProvider, MenuContextProvider } from "./components";
 import {
   AboutPage,
   ContactPage,
+  DotPage,
   HomePage,
   LaPage,
   ServicesPage,
@@ -25,6 +26,7 @@ function App() {
               <Route path="/about/why-us" element={<WhyUsPage />} />
               <Route path="/services" element={<ServicesPage />} />
               <Route path="/services/la" element={<LaPage />} />
+              <Route path="/services/dot" element={<DotPage />} />
               <Route path="/contact" element={<ContactPage />} />
             </Route>
           </Routes>

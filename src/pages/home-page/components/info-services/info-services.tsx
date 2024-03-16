@@ -5,6 +5,7 @@ import { colorText } from "../../../../styles";
 
 import { useContext } from "react";
 import { MQContext } from "../../../../context";
+import { Link } from "react-router-dom";
 
 const InfoServices = () => {
   const { xs, sm, md } = useContext(MQContext);
@@ -48,7 +49,9 @@ const InfoServices = () => {
           </Typography>
         </Stack>
       </Stack>
-      <CustomButton text="Ver más" />
+      <Link to="/services/dot">
+        <CustomButton text="Ver más" />
+      </Link>
     </Stack>
   );
 };
