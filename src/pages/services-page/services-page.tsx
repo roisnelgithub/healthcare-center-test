@@ -92,6 +92,7 @@ const cards = [
     title: "Servicios DOT",
     desc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed diam",
     icon: trunk,
+    link: "/services/dot",
   },
 ];
 

@@ -4,9 +4,9 @@
 a {
   text-decoration: none;
 }
-/* a:visited {
+.title-link a:visited {
   color: inherit;
-} */
+}
 .normal {
   color: white;
   text-decoration: none;

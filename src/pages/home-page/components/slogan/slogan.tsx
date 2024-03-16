@@ -2,6 +2,7 @@ import { Box, Stack, Typography } from "@mui/material";
 import { CustomButton } from "../../../../components/custom-button";
 import { useContext } from "react";
 import { MQContext } from "../../../../context";
+import { Link } from "react-router-dom";
 
 const Slogan = () => {
   const { xs, sm, md, lg } = useContext(MQContext);
@@ -15,7 +16,9 @@ const Slogan = () => {
         >
           Tu bienestar es nuestra prioridad
         </Typography>
-        <CustomButton text="Contáctenos" />
+        <Link to="/contact">
+          <CustomButton text="Contáctenos" />
+        </Link>
       </Stack>
     </Box>
   );

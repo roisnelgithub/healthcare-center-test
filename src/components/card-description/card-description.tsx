@@ -20,6 +20,7 @@ const CardDescription = ({
           fontWeight={"bold"}
           color={colorBlue}
           textAlign={"center"}
+          className="title-link"
         >
           {link ? <Link to={link}>{title}</Link> : title}
         </Typography>

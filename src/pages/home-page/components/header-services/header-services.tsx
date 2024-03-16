@@ -1,6 +1,7 @@
 import { Box, Stack, Typography } from "@mui/material";
 import { CustomButton } from "../../../../components/custom-button";
 import { colorText } from "../../../../styles";
+import { Link } from "react-router-dom";
 
 const HeaderService = () => {
   return (
@@ -9,7 +10,9 @@ const HeaderService = () => {
         <Typography variant="h4" color={colorText} textAlign={"center"}>
           Explora todos nuestros servicios
         </Typography>
-        <CustomButton text="Ver más" />
+        <Link to="/services">
+          <CustomButton text="Ver más" />
+        </Link>
       </Stack>
     </Box>
   );

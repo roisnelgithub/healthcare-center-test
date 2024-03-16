@@ -19,6 +19,7 @@ const MainContent = () => {
       title: "Atención de lesiones",
       desc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed diam",
       icon: medicalPlaster,
+      link: "/services/la",
     },
     {
       id: 2,
@@ -59,7 +60,7 @@ const MainContent = () => {
           <CardGrid cards={cards} />
         </Box>
       </Box>
-      <Stack spacing={10} sx={{ transform: "translateY(-6rem)" }}>
+      <Stack spacing={10} sx={{ transform: "translateY(-6rem)", mt: "2rem" }}>
         <HeaderServices />
         <InfoServices />
       </Stack>
