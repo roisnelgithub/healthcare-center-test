@@ -18,6 +18,7 @@ const Footer = () => {
           justifyContent: "center",
           flexDirection: "column",
           alignItems: "center",
+          rowGap: 6,
           bgcolor: colorFooter,
           borderTopRightRadius: xs ? "7rem" : "60%",
           borderTopLeftRadius: xs ? "7rem" : "60%",
