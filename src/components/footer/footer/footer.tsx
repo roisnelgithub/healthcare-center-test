@@ -40,8 +40,9 @@ const Footer = () => {
             <NavBarMenu links={navBarRight} directionColumn={xs} />
           </Stack>
         </Stack>
-
-        <CopyRight />
+        <Stack sx={{ p: "1rem" }}>
+          <CopyRight />
+        </Stack>
       </Box>
     </Box>
   );

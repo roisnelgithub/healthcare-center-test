@@ -16,7 +16,7 @@ const InfoServices = () => {
     <Stack alignItems={"center"} spacing={6}>
       <Stack
         direction={sm ? "column" : "row"}
-        sx={{ maxWidth: "80%" }}
+        sx={{ maxWidth: "1400px" }}
         spacing={4}
         justifyContent={"center"}
         alignItems={"center"}

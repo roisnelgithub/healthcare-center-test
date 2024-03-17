@@ -16,7 +16,6 @@ const ShareLayout = () => {
 
   const location = useLocation();
   const pathnames = location.pathname.split("/").filter((x) => x);
-  console.log(pathnames);
   return (
     <>
       {!lg && isOpen ? <SideMenu /> : null}
@@ -39,7 +38,7 @@ const ShareLayout = () => {
         <NavBar />
         {!xs && pathnames.length !== 0 && (
           <Stack alignItems={"center"}>
-            <Box sx={{ width: "75%" }}>
+            <Box sx={{ width: "75%", maxWidth: "1400px" }}>
               <CustomBreadcrumbs pathnames={pathnames} />
             </Box>
           </Stack>

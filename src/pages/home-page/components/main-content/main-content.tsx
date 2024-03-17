@@ -27,6 +27,7 @@ const MainContent = () => {
         <Box
           sx={{
             width: xs ? "95%" : sm ? "90%" : md ? "85%" : "80%",
+            maxWidth: "1400px",
           }}
         >
           <CardGrid cards={cards} />
@@ -35,7 +36,7 @@ const MainContent = () => {
       <Stack
         spacing={10}
         sx={{
-          transform: "translateY(-6rem)",
+          transform: "translateY(-3rem)",
           mt: "2rem",
         }}
       >

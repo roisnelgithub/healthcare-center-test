@@ -39,6 +39,7 @@ const ServicesPage = () => {
         <Stack
           sx={{
             width: xs ? "95%" : sm ? "90%" : md ? "85%" : "80%",
+            maxWidth: "1400px",
           }}
           alignItems={"center"}
           spacing={6}
