@@ -14,6 +14,7 @@ import { colorBlue } from "../../../../styles";
 const WhyUsPage = () => {
   const { xs, sm, md, lg } = useContext(MQContext);
   const { t } = useTranslation();
+
   return (
     <Box>
       <HeaderPageLayout image={whyUsImg}>

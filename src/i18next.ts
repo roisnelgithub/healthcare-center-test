@@ -44,7 +44,7 @@ i18next.use(initReactI18next).init({
         immigrationMedicalExamination: "Immigration medical examination",
         fastAttention: "Fast attention",
         servicesMRO: "MRO Services",
-        employeeProgram: "Employee Program",
+        employeeProgram: "Employee Assistance Program",
         normativeCompliance: "Normative compliance",
         sampleCollection: "24h sample collection",
         collectionSites: "Network of collection sites",

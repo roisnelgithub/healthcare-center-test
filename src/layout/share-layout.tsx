@@ -1,5 +1,6 @@
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import {
+  CustomBreadcrumbs,
   Footer,
   MQContext,
   MenuContext,
@@ -10,8 +11,11 @@ import { Box, Stack } from "@mui/material";
 import { useContext } from "react";
 
 const ShareLayout = () => {
-  const { lg } = useContext(MQContext);
+  const { xs, lg } = useContext(MQContext);
   const { isOpen, closeMenu } = useContext(MenuContext);
+
+  const location = useLocation();
+  const pathnames = location.pathname.split("/").filter((x) => x);
   return (
     <>
       {!lg && isOpen ? <SideMenu /> : null}
@@ -30,8 +34,15 @@ const ShareLayout = () => {
           }}
         ></Box>
       )}
-      <Stack sx={{ position: "absolute", top: 0, left: 0 }}>
+      <Stack sx={{ position: "absolute", top: 0, left: 0, zIndex: 10 }}>
         <NavBar />
+        {!xs && (
+          <Stack alignItems={"center"}>
+            <Box sx={{ width: "80%" }}>
+              <CustomBreadcrumbs pathnames={pathnames} />
+            </Box>
+          </Stack>
+        )}
       </Stack>
       <Outlet />
       <Footer />
