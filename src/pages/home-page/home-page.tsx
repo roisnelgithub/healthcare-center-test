@@ -1,10 +1,10 @@
-import { HeaderHome } from "./components/header-home";
+import { CustomCarousel } from "../../components";
 import { MainContent } from "./components/main-content";
 
 const HomePage = () => {
   return (
     <>
-      <HeaderHome />
+      <CustomCarousel />
       <MainContent />
     </>
   );

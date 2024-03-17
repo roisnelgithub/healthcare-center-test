@@ -3,9 +3,9 @@ import { HeaderServices } from "../header-services";
 import { InfoServices } from "../info-services";
 import { useContext } from "react";
 import { MQContext } from "../../../../context";
-
 import { CardGrid } from "../../../../components";
 import { services } from "../../../../const";
+
 const cards = services.slice(0, 4);
 
 const MainContent = () => {
@@ -19,7 +19,9 @@ const MainContent = () => {
           width: "100%",
           margin: "0 auto",
           justifyContent: "center",
-          transform: "translateY(-6rem)",
+          transform: `translateY(${xs ? "-3rem" : sm ? "-4rem" : "-6rem"})`,
+          position: "relative",
+          zIndex: "20",
         }}
       >
         <Box
@@ -30,7 +32,13 @@ const MainContent = () => {
           <CardGrid cards={cards} />
         </Box>
       </Box>
-      <Stack spacing={10} sx={{ transform: "translateY(-6rem)", mt: "2rem" }}>
+      <Stack
+        spacing={10}
+        sx={{
+          transform: "translateY(-6rem)",
+          mt: "2rem",
+        }}
+      >
         <HeaderServices />
         <InfoServices />
       </Stack>

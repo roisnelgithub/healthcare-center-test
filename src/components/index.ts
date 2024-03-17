@@ -7,3 +7,4 @@ export * from "./card-grid";
 export * from "./testimony";
 export * from "./custom-icon";
 export * from "./custom-breadcrumbs";
+export * from "./custom-carousel";
