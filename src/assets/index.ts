@@ -1,49 +1,55 @@
-import medicalBag from "./medical-bag.png";
-import medicalPlaster from "./medical-plaster.png";
-import physicalExam from "./physical-exam.png";
-import testTube from "./test-tube.png";
-import doctors from "./doctors-1.png";
-import flagSpain from "./flag-spain.png";
-import flagUsa from "./flag-usa.png";
-import services from "./services.png";
-import airplane from "./airplane.png";
-import fastAttention from "./fast-attention.png";
-import servicesMRO from "./services-mro.png";
-import people from "./people.png";
-import law from "./law.png";
-import medicalTest from "./medical-test.png";
-import recollection from "./recollection.png";
-import trunk from "./trunk.png";
-import whyUs from "./why-us.png";
-import rate1 from "./rate1.png";
-import rate2 from "./rate2.png";
-import rate3 from "./rate3.png";
-import map from "./map.png";
-import location from "./location.png";
-import la from "./la.png";
+import medicalBagIcon from "./medical-bag.png";
+import medicalPlasterIcon from "./medical-plaster.png";
+import physicalExamIcon from "./physical-exam.png";
+import testTubeIcon from "./test-tube.png";
+import doctorsImg from "./doctors-1.png";
+import doctorImg from "./doctor-1.png";
+import flagSpainIcon from "./flag-spain.png";
+import flagUsaIcon from "./flag-usa.png";
+import servicesImg from "./services.png";
+import airplaneIcon from "./airplane.png";
+import fastAttentionIcon from "./fast-attention.png";
+import servicesMROIcon from "./services-mro.png";
+import peopleIcon from "./people.png";
+import lawIcon from "./law.png";
+import medicalTestIcon from "./medical-test.png";
+import recollectionIcon from "./recollection.png";
+import trunkIcon from "./trunk.png";
+import whyUsImg from "./why-us.png";
+import rateImg1 from "./rate1.png";
+import rateImg2 from "./rate2.png";
+import rateImg3 from "./rate3.png";
+import mapImg from "./map.png";
+import locationImg from "./location.png";
+import laImg from "./la.png";
+import aboutImg from "./about.png";
+import moyaMedicalLogo from "./moya-medical-logo-1.png";
 
 export {
-  medicalBag,
-  medicalPlaster,
-  physicalExam,
-  testTube,
-  doctors,
-  flagSpain,
-  flagUsa,
-  services,
-  airplane,
-  fastAttention,
-  servicesMRO,
-  people,
-  law,
-  medicalTest,
-  recollection,
-  trunk,
-  whyUs,
-  rate1,
-  rate2,
-  rate3,
-  map,
-  location,
-  la,
+  moyaMedicalLogo,
+  aboutImg,
+  doctorImg,
+  medicalBagIcon,
+  medicalPlasterIcon,
+  physicalExamIcon,
+  testTubeIcon,
+  doctorsImg,
+  flagSpainIcon,
+  flagUsaIcon,
+  servicesImg,
+  airplaneIcon,
+  fastAttentionIcon,
+  servicesMROIcon,
+  peopleIcon,
+  lawIcon,
+  medicalTestIcon,
+  recollectionIcon,
+  trunkIcon,
+  whyUsImg,
+  rateImg1,
+  rateImg2,
+  rateImg3,
+  mapImg,
+  locationImg,
+  laImg,
 };
