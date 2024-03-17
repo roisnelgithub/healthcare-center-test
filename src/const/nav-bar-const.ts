@@ -4,12 +4,16 @@ export const navBarLeft = [
     name: "Nuestra Compañía",
     url: "/about",
     shortName: "Compañía",
+    translationKey: "navCompany",
+    shortTranslationKey: "navShortCompany",
   },
   {
     id: 2,
     name: "Nuestros Servicios",
     url: "/services",
     shortName: "Servicios",
+    translationKey: "navServices",
+    shortTranslationKey: "navShortServices",
   },
 ];
 
@@ -19,5 +23,7 @@ export const navBarRight = [
     name: "Contáctenos",
     url: "/contact",
     shortName: "Contáctenos",
+    translationKey: "navContact",
+    shortTranslationKey: "navShortContact",
   },
 ];
