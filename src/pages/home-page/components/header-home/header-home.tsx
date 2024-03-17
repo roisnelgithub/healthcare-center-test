@@ -1,8 +1,8 @@
 import { Box, Stack } from "@mui/material";
 import { Slogan } from "../slogan";
-import doctor from "../../../../assets/doctor-1.png";
 import { useContext } from "react";
 import { MQContext } from "../../../../context";
+import { doctorImg } from "../../../../assets";
 
 const HeaderHome = () => {
   const { xs, sm, md } = useContext(MQContext);
@@ -25,7 +25,7 @@ const HeaderHome = () => {
       </Stack>
       <Box
         sx={{
-          background: `linear-gradient( rgb(0, 22, 57,0.8) , transparent), url(${doctor}) center no-repeat`,
+          background: `linear-gradient( rgb(0, 22, 57,0.8) , transparent), url(${doctorImg}) center no-repeat`,
           width: "100%",
           maxWidth: "1920px",
           height: "100vh",
