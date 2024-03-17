@@ -1,17 +1,20 @@
 import { Box, Stack, Typography } from "@mui/material";
 import { colorBlue } from "../../styles";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 interface CardDescriptionProps {
   title: string;
   description: string;
   link?: string;
+  translateKey: string;
 }
 const CardDescription = ({
-  title,
   description,
   link,
+  translateKey,
 }: CardDescriptionProps) => {
+  const { t } = useTranslation();
   return (
     <Box>
       <Stack spacing={2}>
@@ -20,9 +23,13 @@ const CardDescription = ({
           fontWeight={"bold"}
           color={colorBlue}
           textAlign={"center"}
-          className="title-link"
+          className="title-link "
         >
-          {link ? <Link to={link}>{title}</Link> : title}
+          {link ? (
+            <Link to={link}>{t(`${translateKey}`)}</Link>
+          ) : (
+            t(`${translateKey}`)
+          )}
         </Typography>
 
         <Typography

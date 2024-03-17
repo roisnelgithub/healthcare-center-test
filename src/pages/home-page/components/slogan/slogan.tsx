@@ -3,9 +3,11 @@ import { CustomButton } from "../../../../components/custom-button";
 import { useContext } from "react";
 import { MQContext } from "../../../../context";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const Slogan = () => {
   const { xs, sm, md, lg } = useContext(MQContext);
+  const { t } = useTranslation();
   return (
     <Box sx={{ zIndex: 10, maxWidth: "500px", px: "1rem" }}>
       <Stack spacing={6} alignItems="center">
@@ -14,10 +16,10 @@ const Slogan = () => {
           fontWeight="bold"
           sx={{ color: "white", textAlign: "center" }}
         >
-          Tu bienestar es nuestra prioridad
+          {t("homeHeaderTitle")}
         </Typography>
         <Link to="/contact">
-          <CustomButton text="Contáctenos" />
+          <CustomButton text={t("btnContact")} />
         </Link>
       </Stack>
     </Box>

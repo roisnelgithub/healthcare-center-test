@@ -1,14 +1,16 @@
 import { Stack, Typography } from "@mui/material";
 import { CustomButton } from "../../../../components/custom-button";
-import { doctors } from "../../../../assets/index";
+import { doctorsImg } from "../../../../assets/index";
 import { colorText } from "../../../../styles";
 
 import { useContext } from "react";
 import { MQContext } from "../../../../context";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const InfoServices = () => {
   const { xs, sm, md } = useContext(MQContext);
+  const { t } = useTranslation();
 
   return (
     <Stack alignItems={"center"} spacing={6}>
@@ -23,7 +25,7 @@ const InfoServices = () => {
           sx={{ width: sm ? "100%" : "55%", maxWidth: "500px" }}
           justifyContent={md ? "center" : ""}
         >
-          <img src={doctors} />
+          <img src={doctorsImg} />
         </Stack>
 
         <Stack spacing={2}>
@@ -33,7 +35,7 @@ const InfoServices = () => {
             color={colorText}
             textAlign={"center"}
           >
-            Servicios DOT
+            {t("servicesDOT")}
           </Typography>
           <Typography
             variant="subtitle1"
@@ -49,8 +51,8 @@ const InfoServices = () => {
           </Typography>
         </Stack>
       </Stack>
-      <Link to="/services/dot">
-        <CustomButton text="Ver más" />
+      <Link to="/services/12">
+        <CustomButton text={t("btnSeeMore")} />
       </Link>
     </Stack>
   );

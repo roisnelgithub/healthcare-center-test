@@ -6,11 +6,13 @@ import { MQContext, MenuContext } from "../../context";
 import { Menu } from "@mui/icons-material";
 import { NavBarMenu } from "../nav-bar-menu";
 import { navBarLeft, navBarRight } from "../../const";
+import { useTranslation } from "react-i18next";
 
 const NavBar = () => {
   const { xs, sm, md, lg } = useContext(MQContext);
   const { openMenu } = useContext(MenuContext);
 
+  const { t } = useTranslation();
   return (
     <Box
       sx={{
@@ -36,7 +38,7 @@ const NavBar = () => {
             <NavBarMenu links={navBarLeft} directionColumn={false} />
             <Language arrowColor="white" />
             <NavBarMenu links={navBarRight} directionColumn={false} />
-            {lg && <Typography>Portal de usuarios</Typography>}
+            {lg && <Typography>{t("userPortal")}</Typography>}
           </>
         )}
       </Stack>

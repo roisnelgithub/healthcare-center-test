@@ -4,34 +4,35 @@ import { MQContextProvider, MenuContextProvider } from "./components";
 import {
   AboutPage,
   ContactPage,
-  DotPage,
   HomePage,
-  LaPage,
+  ServicePage,
   ServicesPage,
   WhyUsPage,
 } from "./pages";
 import { ShareLayout } from "./layout";
 
 import "./app.css";
+import { LanguageContextProvider } from "./context";
 
 function App() {
   return (
     <MQContextProvider>
-      <MenuContextProvider>
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<ShareLayout />}>
-              <Route index element={<HomePage />} />
-              <Route path="/about" element={<AboutPage />}></Route>
-              <Route path="/about/why-us" element={<WhyUsPage />} />
-              <Route path="/services" element={<ServicesPage />} />
-              <Route path="/services/la" element={<LaPage />} />
-              <Route path="/services/dot" element={<DotPage />} />
-              <Route path="/contact" element={<ContactPage />} />
-            </Route>
-          </Routes>
-        </BrowserRouter>
-      </MenuContextProvider>
+      <LanguageContextProvider>
+        <MenuContextProvider>
+          <BrowserRouter>
+            <Routes>
+              <Route path="/" element={<ShareLayout />}>
+                <Route index element={<HomePage />} />
+                <Route path="/about" element={<AboutPage />}></Route>
+                <Route path="/about/why-us" element={<WhyUsPage />} />
+                <Route path="/services" element={<ServicesPage />} />
+                <Route path="/services/:id" element={<ServicePage />} />
+                <Route path="/contact" element={<ContactPage />} />
+              </Route>
+            </Routes>
+          </BrowserRouter>
+        </MenuContextProvider>
+      </LanguageContextProvider>
     </MQContextProvider>
   );
 }

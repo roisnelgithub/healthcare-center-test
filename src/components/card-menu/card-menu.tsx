@@ -4,24 +4,31 @@ import { colorText } from "../../styles";
 import { useContext } from "react";
 import { MQContext } from "../../context";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
-export interface CardMenu {
+interface SubService {
+  id: number;
+  service: string;
+}
+export interface CardService {
   id: number;
   title: string;
   desc: string;
   icon: string;
-  link?: string;
+  translationKey: string;
+  services: SubService[];
 }
 
 interface CardMenuProps {
-  card: CardMenu;
+  card: CardService;
 }
 const CardMenu = ({ card }: CardMenuProps) => {
-  const { title, desc, icon, link } = card;
+  const { desc, icon, translationKey } = card;
   const { xs, md } = useContext(MQContext);
+  const { t } = useTranslation();
 
   return (
-    <Link to={link ? link : ""}>
+    <Link to={`/services/${card.id}`}>
       <Paper
         sx={{
           bgcolor: "white",
@@ -43,7 +50,7 @@ const CardMenu = ({ card }: CardMenuProps) => {
               fontWeight={"bold"}
               color={colorText}
             >
-              {title}
+              {t(`${translationKey}`)}
             </Typography>
           </Stack>
 

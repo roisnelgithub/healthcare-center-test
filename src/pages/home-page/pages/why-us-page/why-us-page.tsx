@@ -1,50 +1,29 @@
-import { Box, Stack, Typography } from "@mui/material";
-import { HeaderPageLayout } from "../../../../layout";
 import { useContext } from "react";
-import { MQContext } from "../../../../context";
-import { rate1, rate2, rate3, whyUs } from "../../../../assets";
-import { CardDescription, Testimony } from "../../../../components";
-import { colorBlue } from "../../../../styles";
+import { useTranslation } from "react-i18next";
+import { Box, Stack, Typography } from "@mui/material";
 
-const testimonials = [
-  {
-    id: 1,
-    name: "Alejandro Cuervo",
-    comment:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non cum velit libero sed voluptates consequatur dicta voluptatem ullam accusamus architecto, error excepturi ut reiciendis omnis adipisci? Magnam nostrum ab quo.",
-    rate: 5,
-    image: rate1,
-  },
-  {
-    id: 2,
-    name: "Alejandro Cuervo",
-    comment:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non cum velit libero sed voluptates consequatur dicta voluptatem ullam accusamus architecto, error excepturi ut reiciendis omnis adipisci? Magnam nostrum ab quo.",
-    rate: 4,
-    image: rate2,
-  },
-  {
-    id: 3,
-    name: "Alejandro Cuervo",
-    comment:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non cum velit libero sed voluptates consequatur dicta voluptatem ullam accusamus architecto, error excepturi ut reiciendis omnis adipisci? Magnam nostrum ab quo.",
-    rate: 5,
-    image: rate3,
-  },
-];
+import { MQContext } from "../../../../context";
+
+import { HeaderPageLayout } from "../../../../layout";
+import { CardDescription, Testimony } from "../../../../components";
+
+import { testimonials } from "../../../../const/testimonials-const";
+import { whyUsImg } from "../../../../assets";
+import { colorBlue } from "../../../../styles";
 
 const WhyUsPage = () => {
   const { xs, sm, md, lg } = useContext(MQContext);
+  const { t } = useTranslation();
   return (
     <Box>
-      <HeaderPageLayout image={whyUs}>
+      <HeaderPageLayout image={whyUsImg}>
         <Box sx={{ mb: "10vh" }}>
           <Typography
             variant={xs || sm ? "h3" : md || lg ? "h2" : "h1"}
             fontWeight="bold"
             sx={{ color: "white", textAlign: "center" }}
           >
-            Por qué nosotros
+            {t("aboutWhyUsTitle")}
           </Typography>
         </Box>
       </HeaderPageLayout>
@@ -71,9 +50,10 @@ const WhyUsPage = () => {
             description={
               "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, voluptatibus voluptatum! Neque vitae iste repellendus, praesentium ullam deleniti dolor asperiores aut aliquid accusamus consequuntur doloremque ipsum, optio, in adipisci. Aperiam sunt totam culpa molestias iste incidunt, ducimus quas debitis impedit. Doloremque, voluptatibus voluptatum! Neque vitae iste repellendus, praesentium ullam deleniti dolor asperiores aut aliquid accusamus consequuntur doloremque ipsum, optio, in adipisci. Aperiam sunt totam culpa molestias iste incidunt, ducimus quas debitis impedit."
             }
+            translateKey="whyUs"
           />
           <Typography variant="h4" fontWeight={"bold"} color={colorBlue}>
-            Testimonios
+            {t("testimonies")}
           </Typography>
 
           {testimonials.map((testimony, index) => {

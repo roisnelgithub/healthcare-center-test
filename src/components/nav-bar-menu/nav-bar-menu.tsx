@@ -2,12 +2,15 @@ import { useContext } from "react";
 import { Stack, Typography } from "@mui/material";
 import { NavLink } from "react-router-dom";
 import { MQContext } from "..";
+import { useTranslation } from "react-i18next";
 
 export interface NavBarLink {
   id: number;
   url: string;
   name: string;
   shortName: string;
+  translationKey: string;
+  shortTranslationKey: string;
 }
 
 interface NavBarMenuProps {
@@ -17,6 +20,7 @@ interface NavBarMenuProps {
 
 const NavBarMenu = ({ links, directionColumn }: NavBarMenuProps) => {
   const { xs, sm, md } = useContext(MQContext);
+  const { t } = useTranslation();
   return (
     <Stack
       direction={directionColumn ? "column" : "row"}
@@ -30,10 +34,10 @@ const NavBarMenu = ({ links, directionColumn }: NavBarMenuProps) => {
         >
           <Typography textAlign="center">
             {xs && directionColumn
-              ? link.name
+              ? t(`${link.translationKey}`)
               : sm && !directionColumn
-              ? link.shortName
-              : link.name}
+              ? t(`${link.shortTranslationKey}`)
+              : t(`${link.translationKey}`)}
           </Typography>
         </NavLink>
       ))}

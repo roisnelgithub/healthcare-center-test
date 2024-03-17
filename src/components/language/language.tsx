@@ -2,14 +2,16 @@ import {
   InputBase,
   MenuItem,
   Select,
+  SelectChangeEvent,
   Stack,
   Typography,
   styled,
 } from "@mui/material";
-import { SetStateAction, useState } from "react";
-import { flagSpain, flagUsa } from "../../assets";
+import { useContext } from "react";
+import { flagSpainIcon, flagUsaIcon } from "../../assets";
 
 import { ExpandMore } from "@mui/icons-material";
+import { LanguageContext } from "../../context/language-context";
 
 const CustomInput = styled(InputBase)(({ theme, color }) => ({
   "label + &": {
@@ -45,11 +47,11 @@ interface ArrowColorProps {
 }
 
 const SwitchLanguage = ({ arrowColor, acronym = false }: ArrowColorProps) => {
-  const [language, setLanguage] = useState("es");
-  const handleChange = (event: {
-    target: { value: SetStateAction<string> };
-  }) => {
-    setLanguage(event.target.value);
+  const { language, changeLanguage } = useContext(LanguageContext);
+
+  const handleChange = (event: SelectChangeEvent) => {
+    const lng = event.target.value;
+    changeLanguage(lng);
   };
 
   return (
@@ -66,7 +68,7 @@ const SwitchLanguage = ({ arrowColor, acronym = false }: ArrowColorProps) => {
         <MenuItem value={"es"}>
           <Stack direction="row" alignItems="center" spacing={1}>
             <img
-              src={flagSpain}
+              src={flagSpainIcon}
               alt="Bandera de España"
               style={{ width: "28px" }}
             />
@@ -74,14 +76,14 @@ const SwitchLanguage = ({ arrowColor, acronym = false }: ArrowColorProps) => {
           </Stack>
         </MenuItem>
 
-        <MenuItem value={"us"}>
+        <MenuItem value={"en"}>
           <Stack direction="row" alignItems="center" spacing={1}>
             <img
-              src={flagUsa}
+              src={flagUsaIcon}
               alt="Bandera de España"
               style={{ width: "28px" }}
             />
-            {acronym && <Typography>US</Typography>}
+            {acronym && <Typography>EN</Typography>}
           </Stack>
         </MenuItem>
       </Select>

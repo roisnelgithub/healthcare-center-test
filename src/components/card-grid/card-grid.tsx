@@ -1,6 +1,6 @@
 import { Grid } from "@mui/material";
 import { CardMenu } from "../card-menu";
-import { type CardMenu as CardMenuType } from "../card-menu/card-menu";
+import { type CardService as CardMenuType } from "../card-menu/card-menu";
 
 interface CardGridProps {
   cards: CardMenuType[];

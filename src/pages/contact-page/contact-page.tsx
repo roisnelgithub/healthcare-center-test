@@ -1,23 +1,25 @@
 import { Box, Stack, Typography } from "@mui/material";
 import { HeaderPageLayout } from "../../layout";
-import { location, map } from "../../assets";
+import { locationImg, mapImg } from "../../assets";
 import { useContext } from "react";
 import { MQContext } from "../../context";
 import { colorBlue } from "../../styles";
 import { Email, LocalPhone, LocationOn, Public } from "@mui/icons-material";
+import { useTranslation } from "react-i18next";
 
 const ContactPage = () => {
   const { xs, sm, md, lg } = useContext(MQContext);
+  const { t } = useTranslation();
   return (
     <Stack spacing={4}>
-      <HeaderPageLayout image={map}>
+      <HeaderPageLayout image={mapImg}>
         <Box sx={{ mb: "10vh" }}>
           <Typography
             variant={xs || sm ? "h3" : md || lg ? "h2" : "h1"}
             fontWeight="bold"
             sx={{ color: "white", textAlign: "center" }}
           >
-            Contáctenos
+            {t("contactHeaderTitle")}
           </Typography>
         </Box>
       </HeaderPageLayout>
@@ -35,7 +37,7 @@ const ContactPage = () => {
             sx={{ width: sm ? "100%" : "55%", maxWidth: "500px" }}
             justifyContent={md ? "center" : ""}
           >
-            <img src={location} />
+            <img src={locationImg} />
           </Stack>
 
           <Stack spacing={2}>
@@ -45,7 +47,7 @@ const ContactPage = () => {
               textAlign={"center"}
               color={colorBlue}
             >
-              Contáctenos
+              {t("contact")}
             </Typography>
             <Stack direction={"row"} spacing={1}>
               <LocationOn color="info" />
